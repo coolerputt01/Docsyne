@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocSyne</title>
+  <!--Google fonts CSS.-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!--Preload Image-->
+  <link rel="preload" as="image" href="https://i.imghippo.com/files/zdq1779viY.png">
+  <!--Landing Page CSS file.-->
+  <link rel="stylesheet" href="landingpage.css">
+  <!--Font Awesome icons CSS file.-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Splide CSS file-->
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body >
+  <div id="entireContainer">
+    <nav-bar></nav-bar>
+    <main-container></main-container>
+    <info-container></info-container>
+    <div class="card-container">
+      <card
+      data-aos="fade-up"
+      bg-color="var(--greencardbg)"
+      bg-circle-color="var(--greencardcirclebg)"
+      title="Instant Video Consultation" 
+      icon="<i class='fa-solid fa-phone'></i>"></card>
+     <card
+     data-aos="fade-up"
+      bg-color="var(--purplecardbg)"
+      bg-circle-color="var(--purplecirclecardbg)"
+      title="Find Doctor and book in a moment" 
+      icon="<i class='fa-brands fa-blogger'></i>"></card>
+     <card 
+     data-aos="fade-up"
+      bg-color="var(--bluecardbg)"
+      bg-circle-color="var(--bluecirclecardbg)"
+      title="Lab test verification" 
+      icon="<i class='fa-solid fa-vial-virus'></i>">
+      </card>
+    </div>
+    <!--Splide Carousel-->
+   <section id="card-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+         <ul class="splide__list">
+           <li class="splide__slide">
+                 <carousel-card
+    name="John Cooper"
+    description="Skilled doctors, compassionate care, personalized treatment, accurate diagnoses, excellent communication, professional, knowledgeable, attentive, patient-focused, highly recommended."
+    ></carousel-card>
+           </li>
+           <li class="splide__slide">
+              <carousel-card
+    name="Mark Peter"
+    description="Discover reliable health resources, expert advice, and easy appointment booking on our medical website. Your well-being comes first."
+    ></carousel-card>
+         </li>
+           <li class="splide__slide">
+              <carousel-card
+    name="Swag Blip"
+    description="Stay informed with expert health tips, trusted resources, and convenient appointment scheduling on our website. Your health matters to us."
+    ></carousel-card>
+           </li>
+           <li class="splide__slide">
+              <carousel-card
+    name="Boss Super"
+    description="Access trusted healthcare information, book doctor appointments, and stay updated with the latest medical insights. Prioritizing your health always."
+    ></carousel-card>
+           </li>
+           <li class="splide__slide">
+              <carousel-card
+    name="Mega Linton"
+    description="Explore our website for reliable medical advice, easy appointment booking, and health resources tailored to your needs. Stay well."
+    ></carousel-card>
+           </li>
+         </ul>
+       </div>
+     </section>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!--Splide JS file-->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!--Landing Page JS file.-->
+  <script src="landingpage.js" type="module"></script>
+</body>
+
+</html>

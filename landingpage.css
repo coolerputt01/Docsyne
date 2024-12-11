@@ -1,0 +1,539 @@
+/*Basic colors*/
+
+:root{
+  --textdeep:#2266d4;
+  --textnormal:#041024;
+  --lightbackground:#dfe5f0;
+  --middlebar:#aac5f2;
+  --lighterbackground:#ffffff;
+  --accentextcolor:#b7bbbd;
+  --buttonbackground:#000000;
+  --greencardcirclebg:rgba(164, 235, 164,1);
+  --purplecirclecardbg:rgba(84, 30, 150, 1);
+  --bluecirclecardbg:rgba(11, 169, 227, 1);
+  --greencardbg:rgba(164, 235, 164,0.1);
+  --purplecardbg:rgba(84, 30, 150,0.1);
+  --bluecardbg:rgba(11, 169, 227,0.1);
+  --accentbg:#f2f2f2;
+  --bluebuttonbg:#007bff;
+}
+
+/*Default styles for CSS*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:'Work Sans',sans-serif;
+}
+
+/*Body*/
+
+body,html{
+  width:100vw;
+  height:100%;
+  overflow-x:hidden;
+}
+/*Full Entire Container*/
+
+#entireContainer{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:100vw;
+  flex-direction:column;
+}
+
+/*Header Title*/
+
+.header-title{
+  font-size:2em;
+  padding:12px;
+}
+
+/*Color nav logo and nav-bar link home*/
+
+.header-colored{
+  color:var(--textdeep);
+}
+
+/*Nav bar*/
+
+.nav-bar{
+  width:100vw;
+  height:5vh;
+  padding:12px;
+  backdrop-filter: blur(10px);
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
+
+/*Navigation tabs*/
+
+.navigation-tabs{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width:50vw;
+  background:var(--accentbg);
+  padding:8px;
+  border-radius:50px;
+  box-shadow: inset 2px 2px 2px 2px var(--lightbackground);
+  border:2px var(--lightbackground) solid;
+}
+/*Navigation tabs individual links*/
+
+.navigation-tabs a{
+  border-right:2px var(--lighterbackground) solid;
+  padding:8px;
+  color:var(--textnormal);
+  text-decoration: none;
+}
+
+/*Remove the white border from the last navigation link*/
+
+.navigation-tabs a:last-child{
+  border:none;
+}
+
+/*Button Dark*/
+
+.button-dark{
+  padding:10px;
+  background-color:var(--buttonbackground);
+  border-radius:50px;
+  color:var(--lightbackground);
+  font-size:0.9em;
+  font-weight:bold;
+  border:none;
+  outline:none;
+}
+
+/*Main container*/
+
+.hero{
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction:row;
+  margin-top:20px;
+  width:100vw;
+}
+
+/*Hero charge*/
+
+.hero-charge{
+  font-size:4em;
+  width:55vw;
+  padding:20px;
+  margin:2px;
+  text-align:left;
+  color:var(--textnormal);
+  font-weight:normal;
+}
+
+/*Hero section*/
+
+.hero-section{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-direction:column;
+}
+
+/*Blue button*/
+
+.button-primary{
+  padding:15px;
+  background-color:var(--bluebuttonbg);
+  border-radius:50px;
+  color:var(--lightbackground);
+  font-size:1em;
+  font-weight:bold;
+  border:none;
+  outline:none;
+}
+
+/*Right arrow icon*/
+
+.right-icon{
+  padding:12px;
+  font-size:0.7em;
+}
+
+/*Hero section Buttons*/
+
+.hero-section-buttons{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-direction:row;
+  gap:40px;
+  width:40vw;
+  margin:10px;
+}
+
+/*Doctor Image*/
+
+.doctor-image-pose{
+  width:50vw;
+  height:35vh;
+  object-fit: cover;
+  image-resolution: pixelated;
+  z-index:10;
+  transform-origin: 50% 0%;
+}
+
+/*Image div and image div after pseudo element styles*/
+
+.image-div{
+  position:relative;
+}
+.image-div::after{
+  position: absolute;
+  content: '';
+  top:0;
+  left:10%;
+  z-index:-1;
+  width:80%;
+  height:100%;
+  background: linear-gradient(180deg,var(--bluecardbg),transparent);
+  border-radius:22px;
+}
+
+/*Image div before elements*/
+
+.image-div::before{
+  position: absolute;
+  content: 'Surgeon';
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size:1.3em;
+  font-weight: bold;
+  top:50%;
+  left:-15%;
+  z-index:10;
+  width:35%;
+  height:10%;
+  background-color:var(--lightbackground);
+  border-radius:10px;
+}
+
+/*Main Section end nav*/
+
+.card-section-end{
+  width:100vw;
+  height:5vh;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-direction:row;
+  background: linear-gradient(60deg,var(--middlebar),var(--middlebar),var(--bluecardbg));
+}
+
+/*Information nav bar*/
+
+.info-nav{
+  width:100%;
+  padding:6px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  color:var(--lighterbackground);
+}
+
+/*Information Description*/
+
+.info-description{
+  font-size: 0.9em;
+}
+
+/*Information Text*/
+
+.info-text{
+  font-size:4em;
+  width:50vw;
+  padding: 30px;
+  margin:15px;
+}
+
+/*Information Container*/
+
+.info-container{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  margin-top:10%;
+}
+
+/*Information full text*/
+
+.info-text-forms{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-direction: row;
+  gap:10%;
+}
+
+/*Information text less bold*/
+
+.info-text-less-bold{
+  color:var(--accentextcolor);
+}
+
+/*Information in full*/
+
+.info-text-full{
+  width:50vw;
+  text-align: left;
+}
+
+/*Card*/
+
+.card{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  padding:30px;
+  width:30vw;
+  height:18vh;
+  border-radius:8%;
+  gap:10%;
+  opacity:1;
+}
+
+/*Icons*/
+
+.icon{
+  color: transparent;
+  -webkit-text-stroke:2px var(--lighterbackground);
+  padding:10%;
+  font-size: 3em;
+  text-align:center;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  place-content: flex-start;
+  border-radius:50%;
+}
+
+/*Card information title*/
+
+.card-title{
+  color:var(--textnormal);
+  font-weight: normal;
+  font-size:1.6em;
+  padding:18px;
+  text-align:left;
+}
+
+/*Card container*/
+
+.card-container{
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: row;
+  gap:25px;
+}
+
+/*Carousel Container*/
+
+.carousel-card{
+  width:100vw;
+  height:20vh;
+  background-color:var(--accentbg);
+  border-radius:22px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: column;
+  margin-top:25%;
+}
+
+/*Carousel Description*/
+
+.carousel-description{
+  text-align: center;
+  font-weight :normal;
+  font-size: 1.8em;
+  padding:18px;
+}
+
+/*Doctor Card*/
+
+.doctor-image{
+  width:14vw;
+  height:4.5vh;
+  border-radius:50%;
+  object-fit:cover;
+  padding:8px;
+}
+
+/*Carousel-section*/
+
+.carousel-section{
+  margin:10px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: row;
+  gap:6%;
+}
+.star-container{
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: row;
+  gap:5%;
+  width:6vw;
+  justify-content: space-evenly;
+  align-items:center;
+  flex-direction: row;
+  margin:3%;
+}
+
+/*Star Icon*/
+
+.fa-star{
+  color:#f78400;
+}
+
+/*Person carousel name information*/
+
+.person-name{
+  width:100%;
+}
+
+/*Person carousel information*/
+
+.person-info{
+  width:100%;
+}
+
+/*Responsiveness*/
+
+@media (max-width:400px){
+  
+  .header-title{
+    font-size:1.3em;
+  }
+  
+  .nav-bar{
+    justify-content:space-between;
+    backdrop-filter:blur(10px);
+    position:fixed;
+    top:0;
+    height:15%;
+    z-index:100;
+  }
+  
+  .hero{
+    margin-top:30%;
+    flex-direction:column-reverse;
+  }
+  
+  .navigation-tabs{
+    display:none;
+  }
+  
+  .hero-charge{
+    font-size:1.4em;
+    width:100%;
+    text-align:center;
+  }
+  
+  .button-primary{
+    padding:12px;
+    font-size:0.6em;
+    background: linear-gradient(120deg, transparent,#007bff,#007bff);
+  }
+  
+  .services-text{
+    font-size:0.5em;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+  }
+  
+ .right-icon{
+  padding:2px;
+}
+
+body,html{
+  overflow-x:hidden;
+}
+
+.info-nav{
+  font-size:0.5em;
+}
+
+.image-div::before{
+  display:none;
+}
+
+.info-text{
+  font-size:1.5em;
+  width:100%;
+}
+
+.card-container{
+  flex-direction: column;
+  margin-top:20%;
+}
+
+.info-text-full{
+  width:100%;
+  font-size:0.8em;
+  text-align: center;
+}
+
+.info-text-forms{
+  text-align: center;
+  flex-direction: column;
+}
+
+.card{
+  margin:15%;
+  padding:15%;
+  width:70vw;
+  height:10vh;
+  border-radius:3%;
+  gap:8%;
+}
+
+.icon{
+  font-size:1em;
+}
+
+.card-title{
+  font-size: 0.5em;
+  width:100%;
+  text-align: center;
+}
+.carousel-card{
+  width:100%;
+  height:50vh;
+}
+.carousel-description{
+  font-size:0.6em;
+}
+.person-name{
+  font-size:0.5em;
+}
+.doctor-image{
+  width:47vw;
+  height:14vh;
+  object-fit: cover;
+}
+.fa-star{
+  font-size:0.5em;
+}
+}
